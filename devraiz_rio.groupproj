@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7144C2D7-7813-48BD-AC79-46B4D76D0354}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DevRaiz.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="demo\DEMO.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DevRaiz">
+        <MSBuild Projects="DevRaiz.dproj"/>
+    </Target>
+    <Target Name="DevRaiz:Clean">
+        <MSBuild Projects="DevRaiz.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DevRaiz:Make">
+        <MSBuild Projects="DevRaiz.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DEMO">
+        <MSBuild Projects="demo\DEMO.dproj"/>
+    </Target>
+    <Target Name="DEMO:Clean">
+        <MSBuild Projects="demo\DEMO.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DEMO:Make">
+        <MSBuild Projects="demo\DEMO.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DevRaiz;DEMO"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DevRaiz:Clean;DEMO:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DevRaiz:Make;DEMO:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

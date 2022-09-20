@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/19 21:39:06.000.805,=rtl.dcp</Transaction>
+    <Transaction>2022/09/19 21:39:45.000.201,C:\Users\dr_in\Documents\Embarcadero\Studio\Projects\Package1.dproj=G:\Components\DevRaiz.dproj</Transaction>
+    <Transaction>2022/09/19 21:46:02.000.965,=G:\Components\Unit1.pas</Transaction>
+    <Transaction>2022/09/19 21:47:21.000.875,G:\Components\Unit1.pas=G:\Components\uDREdit.pas</Transaction>
+    <Transaction>2022/09/19 21:50:51.669,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
